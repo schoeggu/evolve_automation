@@ -6817,7 +6817,7 @@
                 return;
             }
 
-            if (settings.enableRngPrediction && settings.rng_displayWishOutcomes) {
+            if (game.global.race.wish > 0 && settings.enableRngPrediction && settings.rng_displayWishOutcomes) {
                 wishData.minor.map(wish => wish.id).forEach(wish => state.tooltips['wish' + wish] = this.minorWish[wish].description);
                 wishData.major.map(wish => wish.id).forEach(wish => state.tooltips['wish' + wish] = this.majorWish[wish].description);
             }
